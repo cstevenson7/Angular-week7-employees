@@ -1,0 +1,90 @@
+section{
+    display:grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "employeeFirstName   employeeFirstNameDisplay"
+    "employeeLastname   employeeLastnameDisplay"
+    "employeeAddress  employeeAddressDisplay"
+    "employeeDOB  employeeDOBDisplay"
+    "submitButton  submitButton";
+}
+
+#employeeFirstName{
+    grid-area: employeeFirstName;
+    border: 1px solid black;
+    display:block;
+
+}
+
+#employeeLastname{
+    grid-area:employeeLastname;
+    border: 1px solid black;
+    display:block;
+    
+}
+
+#employeeAddress{
+    grid-area: employeeAddress;
+    border: 1px solid black;
+    display: block;
+
+}
+
+#employeeDOB{
+    grid-area: employeeDOB;
+    border: 1px solid black;
+    display: block;
+
+}
+
+
+#employeeFirstName,#employeeLastname,#employeeAddress,#employeeDOB,label,button{
+    margin-left:30vw;
+    
+}
+
+#employeeFirstNameDisplay{
+    grid-area: employeeFirstNameDisplay;
+    font-size: 1.3em;
+    margin:5px 0;
+}
+
+#employeeLastnameDisplay{
+    grid-area: employeeLastnameDisplay;
+    font-size: 1.3em;
+    margin:5px 0;
+}
+
+#employeeAddressDisplay{
+    grid-area: employeeAddressDisplay;
+    font-size:1.3em;
+    margin:5px 0;
+}
+
+
+#employeeDOBDisplay{
+    grid-area: employeeDOBDisplay;
+    font-size:1.3em;
+    margin:5px 0;
+}
+
+
+.alert{
+    font-size: 1rem;
+    font-weight: 200;
+
+}
+
+.alert-danger{
+    color:red;
+    margin-left: 30vw;
+    padding: 2px;
+
+}
+
+button{
+    margin-top: 2vh;
+}

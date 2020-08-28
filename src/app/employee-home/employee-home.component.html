@@ -1,0 +1,33 @@
+<h1>Add a New Employee:</h1>
+<section>
+    <div>
+    <form [formGroup] = "employeeForm" >
+        <label for="employeeFirstName">Employee First Name: </label>
+        <input type="text" formControlName ="employeeFirstName" id="employeeFirstName" [(ngModel)] = "employeeFirstNameDisplay">
+        <div *ngIf="employeeFirstName.invalid && (employeeFirstName.dirty || employeeFirstName.touched)" class="alert alert-danger">First name is required 1 characters</div>
+
+        <label for="employeeLastname"> Employee Last Name: </label>
+        <input [(ngModel)] ="employeeLastnameDisplay" type="text" formControlName ="employeeLastname" id="employeeLastname">
+        <div *ngIf="employeeLastname.invalid && (employeeLastname.dirty || employeeLastname.touched)" class="alert alert-danger">Last name is Required 1 characters </div>
+
+        <label for="employeeAddress">Employee Address: </label>
+        <input type="text" formControlName= "employeeAddress" id="employeeAddress" [(ngModel)] = "employeeAddressDisplay">        
+        <div *ngIf="employeeAddress.invalid && (employeeAddress.dirty || employeeAddress.touched)" class="alert alert-danger">Address is Required with at least 10 characters</div> 
+
+        <label for="employeeDOB">Employee Date of Birth: </label>
+        <input type="text" formControlName= "employeeDOB" id="employeeDOB" [(ngModel)] = "employeeDOBDisplay">        
+        <div *ngIf="employeeDOB.invalid && (employeeDOB.dirty || employeeDOB.touched)" class="alert alert-danger">Date of Birth  is Required with at least 10 characters</div>
+     
+        <button type="button" (click)="onSubmit()" id="submitButton"> Submit Button</button>
+    </form>
+    </div>
+
+    <div>
+        <br>
+        <p id="employeeFirstNameDisplay">{{ employeeFirstNameDisplay }}</p>
+        <p id="employeeLastnameDisplay"> {{ employeeLastnameDisplay }}</p>
+        <p id="employeeAddressDisplay">{{ employeeAddressDisplay }}</p>
+        <p id="employeeDOBDisplay">{{ employeeDOBDisplay }}</p>
+    </div>
+
+</section>
